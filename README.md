@@ -1,25 +1,13 @@
 # Robokassa SDK для C# / .NET
 
-SDK для серверной интеграции с Robokassa на .NET 8 и новее. Основной способ создания платежей - счета через Invoice API. Отдельные сервисы отвечают за уведомления, возвраты, холдирование, рекуррентные списания, фискализацию и SMS.
+SDK для приёма платежей через Robokassa в приложениях на C# и .NET 8 и новее. Поддерживает Invoice API, уведомления об оплате, возвраты, холдирование, рекуррентные списания, фискализацию и SMS.
 
-## Подключение
+## Установка
 
 Установите пакет из NuGet:
 
 ```sh
 dotnet add package Robokassa.Sdk
-```
-
-Для подключения исходников добавьте ссылку на проект SDK:
-
-```sh
-dotnet add path/to/your-app.csproj reference src/Robokassa/Robokassa.csproj
-```
-
-Или соберите NuGet-пакет для локального использования:
-
-```sh
-dotnet pack src/Robokassa/Robokassa.csproj -c Release -o artifacts/packages
 ```
 
 ## Создание платежа
