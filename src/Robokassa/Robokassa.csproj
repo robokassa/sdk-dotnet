@@ -1,7 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <PackageId>Robokassa</PackageId>
+    <PackageId>Robokassa.Sdk</PackageId>
+    <Authors>Robokassa</Authors>
+    <Company>Robokassa</Company>
+    <PackageProjectUrl>https://github.com/robokassa/sdk-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/robokassa/sdk-dotnet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <Version>0.1.0</Version>
     <Description>SDK Robokassa для .NET с основным интерфейсом Invoice API</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>

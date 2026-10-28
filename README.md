@@ -4,7 +4,13 @@ SDK для серверной интеграции с Robokassa на .NET 8 и �
 
 ## Подключение
 
-Добавьте ссылку на проект SDK в своем приложении:
+Установите пакет из NuGet:
+
+```sh
+dotnet add package Robokassa.Sdk
+```
+
+Для подключения исходников добавьте ссылку на проект SDK:
 
 ```sh
 dotnet add path/to/your-app.csproj reference src/Robokassa/Robokassa.csproj
@@ -313,4 +319,4 @@ dotnet test tests/Robokassa.Tests -c Release -p:TestTargetFramework=net8.0
 
 ## Лицензия
 
-[MIT](LICENSE).
+[MIT](https://github.com/robokassa/sdk-dotnet/blob/main/LICENSE).
