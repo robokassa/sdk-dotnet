@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PackageId>Robokassa</PackageId>
+    <Version>0.1.0</Version>
+    <Description>SDK Robokassa для .NET с основным интерфейсом Invoice API</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>robokassa;payments;invoice;sdk</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.7.0" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>

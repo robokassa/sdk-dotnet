@@ -1,0 +1,29 @@
+name: sdk checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - sdk: 8.0.x
+            framework: net8.0
+          - sdk: 10.0.x
+            framework: net10.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.sdk }}
+      - run: dotnet test tests/Robokassa.Tests/Robokassa.Tests.csproj -c Release -p:TestTargetFramework=${{ matrix.framework }} --logger trx --results-directory artifacts/test-results
+      - run: dotnet build examples/Robokassa.AspNetCore/Robokassa.AspNetCore.csproj -c Release
+      - run: dotnet pack src/Robokassa/Robokassa.csproj -c Release -o artifacts/packages
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sdk-${{ matrix.framework }}
+          path: artifacts/
